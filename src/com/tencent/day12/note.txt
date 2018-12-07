@@ -1,0 +1,24 @@
+第12天
+2018/7/25
+
+一、date(时间)	
+	java.util.Date类是时间的基类，有三个子类，分别如下:
+		1、java.sql.Date				数据库时间，支持年月日
+		2、java.	sql.Time			数据库时间，时分秒		
+		3、java.sql.Timestamp		数据库时间，年月日时分秒毫秒
+		
+二、日历
+	在java中java.util.Calendar代表一个日历，可以用来加减日期
+
+三、基本数据类型的包装类
+	1、数字型
+		Byte、Short、Integer、Long、Float、Double	有一个共同的父类Number
+		java.lang.Number类是数字的基类，Number能代表java中的任何数字
+		
+*****2、Comparable接口
+		Comparable接口作用是比较两个任何类型对象的大小，此接口中只有一个方法，如下:
+			 public int compareTo(T o);
+			 
+四、Math
+	java.lang.Math类代表数学运算，比如:绝对值，平方根，最大数，最小数
+		

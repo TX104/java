@@ -1,0 +1,84 @@
+14天
+	2018/7/27
+一、Set(散列集)
+	1、什么是Set(散列集)
+	在java中java.util.Set表示一个散列集，Set一个接口，具体表现如下:
+		a、HashSet
+		b、TreeSet
+	
+	2、Set集合特点
+		a、有序不能重复
+		b、存储不同类型的元素
+		c、动态长度
+		
+	3、Set遍历方式
+		a、foreach遍历
+		b、迭代器遍历
+	
+	4、HashSet特点:
+		a、元素是无序的
+		b、元素不能重复
+		c、没有下标
+		
+	5、TreeSet特点：
+  		a、元素是有序的，按自然元素排序
+  		b、元素不能重复
+  		c、没有下标
+  		
+ *****6、Set集合去重原理
+ 		Set集合只针对引用类型进行去重，引用类型必须重写hashCode与equals两个方法，不然不能去重
+ 		
+ *****7、==与equals区别
+ 	==(只比较栈内存的东西)
+ 	在基本数据:比较的是值
+ 	在引用类型:比较的是指针
+ 	
+ 	equals
+ 		基本数据:没有equals方法
+ 		
+ 		引用类型:如果没有重写equals方法，与==相同
+ 				如果重写equals方法，比较的是内容
+ 				在java中规定重写了equals方法，一定要hashCode方法，
+ 				两个对象equals相等，hashCode必须相等
+ 				如何不相等，Set集合没有办法去重
+ 				
+ 二、Map(键值对)
+	1、什么是Map
+		在java中java.util.Map表示一个Map，Map是以键值对的方式存储数据
+		一个key对应一个value，key是唯一的，value可以重复
+		也是数据结构的一种，Map是一个接口，没有Collection接口
+		Map不是集合
+		
+		a、HashMap	(重点)
+		b、Hashtable		
+		c、TreeMap
+ 	
+ 	2、Map常用方法
+ 		put(key,value)				添加元素
+ 		get(key)					根据key值获取value
+ 		remove(key)					根据key值删除元素
+ 		keySet()					获取所有的key值，返回Set集合
+ 		values						获取所有的value值，返回Collection集合
+ 		
+ 	3、遍历Map的步骤
+ 		a、使用keySet()获取所有的key值，返回Set集合
+ 		b、遍历Set集合
+ 		c、在遍历中获取key，根据key获取value，调用get(key)方法
+ 		
+ 		Set<String>  keys=map.keySet();	
+		//遍历Set集合
+		for(String key:keys){
+			int value1=map.get(key);
+			System.out.println("key值:"+key+" "+"value值:"+value1);
+		}
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 		
+  	
+		

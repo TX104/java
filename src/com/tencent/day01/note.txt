@@ -1,0 +1,157 @@
+java 第一天
+
+一、java语言的特点
+	1、简单易学
+		java语言比c、c++还简单，没有复杂的指针类型，语法与c、c++很类似
+	
+	2、跨平台
+		java语言可以跨平台，一份代码可以在window下运行，也可以在Linux下运行，一处编译处处运行，与平台无关
+		
+	3、面向对象
+		java语言是面向对象的语言，符合人的逻辑思维
+		
+	4、安全性
+		java的数据结构是与对象存储，所以编译安全、运行安全、世界上最安全的语言
+		
+	5、多线程
+		java支持多线程操作，同一时刻可以做多件事情
+二、java的发展历史
+	java是1995年由sun（斯坦福大学的网络公司）公司推出
+	sun公司最早做电子芯片开发，使用的是c语言
+	java之父    詹姆斯高斯林
+	1990成立java小组，开发java语言，OAK语言，1995年正式改名为java（爪哇）
+	jdk   window/linux
+	
+	
+	版本
+	jdk1 -- jdk2 -- jdk3 -- jdk4 -- jdk1.5 -- jdk1.6 -- jdk1.7 -- jdk1.8 -- jdk1.9
+	
+	2009年Oracle收购sun公司
+	jdk1.8
+	
+	市面上用的最多的版本
+	jdk1.6 -- jdk 1.7 -- jdk 1.8
+	
+***三、java的平台
+	1、J2SE（java SE）    java的标准平台 		jdk
+	2、J2EE	（java EE）    java的企业平台		java web
+	3、J2ME  （java ME）     java的微型平台              塞班
+	
+*****四、环境的搭建
+	安装jdk有两部分：一部分是jdk,另一部分是jre
+	jdk是开发环境
+	jre是运行环境
+	
+	环境变量：
+	环境变量名称：        			        环境变量值：
+
+	JAVA_HOME 安装路径                       D:\Program Files\java\jdk1.8.0_121
+
+	path      可执行文件路径            %JAVA_HOME%\bin
+
+	CLASSPATH  字节码路径                  .;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar
+	
+五、java的源文件
+	java的源文件是以.java结尾的文件
+	
+	编程语言：
+	1、编译性语言		源代码与运行代码不一样		java- jvm - 编译 - .class
+	
+	2、解释性语言		源代码与运行代码是一样的	javaScript	css	html
+
+	通过工具eclipse编译成.class文件，
+	jvm(java的虚拟机)读取.class文件，开始运行程序
+	
+	java的应用程序是以类作为基本单位
+	
+	定义类：
+	public class HelloWorld{
+		public static void main(String[] args){
+		System.out.println("HelloWorld");
+		System.out.println("======java helloworld=====");
+		
+	}
+}
+public class 类名{
+	//类体
+	
+}
+	
+	注：类名必须与文件名相同，区分大小写
+		java应用程序的入口是main方法
+
+六、java中的注释
+	//     当行注释		ctrl+/
+	
+	/**/   多行注释		ctrl+shift+/    ctrl+shift+\
+
+***七、标识符
+	在java中类名、方法名、变量名、称为标识符
+	
+	标识符的规则：
+	1、标识符由字母、数字、下划线、美元符号组成
+	2、首字母不能以数字开头
+	3、不能是java关键字
+	4、不能是null、true、false，尽管他们不是java中的关键字
+	
+	类名：首字母一定要大写，驼峰命名，使用英文单词		比如：StudentCard
+	方法名：首字母一定小写，驼峰命名，使用英文单词		比如：setAge()、getAge()
+	变量名：首字母一定小写，驼峰命名，使用英文单词		比如：useAge、useName
+	
+八、java的关键字
+	在java中有些特殊的英文单词，代表着特殊的意义，称为java关键字
+	
+	
+*****九、数据类型
+	1、java的数据类型：
+		a、基本数据类型（8个）
+			
+		b、引用类型		//String 对象 数组
+		c、类类型
+		d、枚举类型
+	(2)、基本数据类型
+		1、整数型
+			byte(字节型)		占用1个字节		取值范围：-2^7 ~ 2^7-1	-128~127
+			short(短整型)	占用2个字节		取值范围：-2^15 ~ 2^15-1	
+			int(整型)		占用4个字节		取值范围：-2^31 ~ 2^31-1
+			long(长整型)		占用8个字节		取值范围：-2^63 ~ 2^63-1
+			
+			注：整数默认int型
+		
+		2、浮点型（小数）
+			float(单精度)	占用4个字节		取值范围：-3.14*10^38 ~ 3.14*10^38
+			double(双精度)	占用8个字节		取值范围：-1.7*10^308 ~ 1.7*10^308
+			
+		3、布尔型（boolean）
+			boolean			占用1个字节		取值范围：true、false
+			
+		4、字符型
+			char			占用2个字节		取值范围：0 ~65535
+			
+			
+	UNicode前127位就是ASCII码
+十、字符编码
+	ISO-8859-1				英文
+	GBK						简体中文
+	GB2312					繁体字
+	UTF-8					国际通用字符
+
+*****十一、数据类型转换
+	隐式类型转换：小数据类型转大数据类型，称为隐式转换
+	强制转换：大数据类型转小数据类型，称为强制转换
+	
+	注：数据类型超出范围，会变成最小值
+	       强制转换会丢失精度
+	
+*****十二、基本数据类型的默认值
+	整数		默认0
+	浮点		默认0.0
+	布尔		默认false
+	字符		默认0
+	
+	
+	
+	
+	
+	
+	

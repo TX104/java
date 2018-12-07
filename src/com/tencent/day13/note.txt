@@ -1,0 +1,77 @@
+第13天		2018/7/26
+
+一、集合
+    1、什么是集合
+	集合就是一堆数据绑定在一起，存储在内存中，也是数据结构的一种
+	在java中java.util.Collection表示集合的跟接口
+	常用子接口:	List(列表)	Set(散列集)
+	
+	2、什么是数据结构
+		数据在内存中摆放形式称为数据结构，如果想把数据存放在内存中，就要用到数据结构，数据结构避免不了的就是算法
+		
+二、List列表
+	1、什么是list
+		在java中java.util.List表示一个列表，它是一个接口
+		具体有三个实现类
+		a、ArrayList(动态数组)
+		b、LinkedList(链表)
+		c、Vector(向量)
+	
+*****2、List特点
+		a、有序可以重复
+		b、存储不同类型的元素
+		c、动态长度
+	
+*****3、ArrayList(动态数组)特点
+		a、有序可以重复
+	 	b、类型可以不相同(建议相同，使用泛型)
+	 	c、动态长度
+	 	d、内存地址的连续的
+		e、查找效率很高
+	
+*****4、LinkedList(链表)特点
+	   a、有序可以重复
+	   b、类型可以不相同(建议相同，使用泛型)
+	   c、动态长度
+	   d、内存地址不是连续的
+	   e、修改元素效率高(添加、修改、删除)
+	   
+*****5、ArrayList与LinkedList的区别
+		a、ArrayList底层是数组，LinkedList底层是链表
+		b、ArrayList元素存储地址是连续的，遍历比较快，操作元素比较慢
+		   LinkedList元素存储地址是相互指向的，遍历比较慢，操作元素比较快 
+		   
+	
+*****6、List遍历方式
+	 	a、下标遍历
+	 	b、foreach遍历
+	 	c、迭代器遍历
+	 	
+	 	注:效率最高的是foreach遍历
+	  
+	 7、List常见方法
+	 	size()								列表的大小
+	 	get(int index)						根据下标获取元素位置
+	 	iterator()							转换成迭代器
+	 	
+	 	add(Object obj)						添加元素到尾部
+	 	add(int index,Object obj)			添加元素到指定位置
+	 	
+	 	set(int index,Object obj)			替换指定位置的元素
+	 	remove(int index)					根据下标删除元素
+	 	addAll(Collection c)				添加一个集合到List
+	 	addAll(int index, Collection c)		添加一个集合到指定位置的List
+	 
+	 8、ArrayList与Vector的区别
+	 	a、ArrayList初始化长度是0，Vector初始化长度为10
+	 	b、ArrayList添加后长度是10，Vector添加元素后还是10
+	 	c、ArrayList超出10个长度，每次以一半(5个)增长，
+	 		Vector超出10个长度，每次以一倍(10个)增长
+	 	d、ArrayList线程不安全，Vector线程安全
+
+	   
+	   
+	   
+	   
+	   
+	

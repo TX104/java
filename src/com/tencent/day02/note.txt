@@ -1,0 +1,106 @@
+java(第二天)
+******一、运算符
+	java运算符优先级别从高到低排列
+	1、分隔符			().[];
+	2、一元运算符		++、--、！
+	3、算术运算符		+、 -、 *、 /、 %
+	4、关系运算符		>、 >=、 <、 <=、 =、 ==、 ！=
+	5、逻辑运算符		&&	&	||	|
+	6、三目运算符		条件？值1：值2
+	7、赋值运算符		=、	+=、	-=、	*=、	/=、 %=
+	
+	注：	整数=整数/整数
+		浮点=浮点/浮点
+		浮点=浮点/整数
+		浮点=浮点+整数
+		
+		导包：Ctrl+shift+o(导入全部)
+			 Ctrl+shift+m(导入单个)
+二、控制台
+	//创建一个控制台
+	Scanner sc=new Scanner(System.in);
+	
+	sc.nextByte();		//返回byte型 
+	sc.nextShort();		//返回short型
+	sc.nextInt();		//返回int型
+	sc.nextLong();		//返回long型
+	sc.nextFloat();		//返回float型
+	sc.nextDouble();	//返回double型
+	sc.nextBoolean();	//返回布尔型
+	sc.next();//字符串
+	
+	//关闭控制台
+		sc.close();
+	
+三、流程控制语句
+	1、顺序语句(90%)
+		顺序语句是由程序从上往下执行，一条语句一条语句的执行，直到程序最后一句结束
+		第一句-->..第n句-->最后一句
+		
+	2、分支语句(5%)
+		分支语句根据条件判断，为true时执行哪些语句，为false时执行哪些语句
+		a、if else
+		if(条件){
+			//代码块
+		}else{
+			//代码块
+		}
+		b、if else if else
+		if(条件1){
+			//代码块
+		}else if(条件2){
+			//代码块
+		}else{
+			//代码块
+		}
+		c、if else嵌套
+		if(条件){
+					//代码块
+			if(条件){
+				//代码块
+			}else{
+				//代码块
+			}
+		}else{
+			//代码块
+		}
+		d、switch(变量){
+			case 值1:
+			//代码块
+			break;
+			.
+			.
+			.
+			case 值n:
+			//break;
+			default:
+			//代码块
+		}
+		
+		注：switch语句块一定要跟break关键字
+		*****条件变量的数据类型:	byte、short、int、char、String
+							能隐式转换成int类型的都可以，就是比int小的数据类型
+							String从JDK1.7以后支持
+		*****什么时候用if、什么时候用switch
+		判断一段范围使用if
+		判断条件等于某个值用switch
+	3、循环语句(5%)
+	循环语句根据条件，决定是否重复执行一段代码
+	a、while循环
+	while(条件){
+		//循环体代码
+	}
+	do{
+		//循环体代码
+	}while(条件)
+
+	while与do..while的区别
+	1、do  while 至少有一次执行循环体代码的机会
+	2、do while 与while功能相同时，do while 会多执行一次
+四、break关键字
+	break能跳出指定的语句块，比如：switch语句块
+		
+	
+	
+	
+	
